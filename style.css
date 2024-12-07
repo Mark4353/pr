@@ -1,0 +1,16 @@
+.btn{
+    background-color: rgb(60, 209, 10);
+
+}
+.text{
+    color: chocolate;
+    background-color: aqua;
+}
+.art{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+

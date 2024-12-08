@@ -19,8 +19,6 @@
 // box.prepend(title);
 // console.log(box);
 
-
-
 //* вставляемо box на сторінку
 // const page = document.querySelector("body");
 // page.prepend(box);
@@ -29,23 +27,71 @@
 // box.after(link);
 
 //! створити статтю яка буде складатися з зображення инфомації та кнопки або лінка и наповнити її відповідним контентом
-const box = document.createElement("article");
-const image = document.createElement("img");
-const text = document.createElement("p");
-const button = document.createElement("button");
+// const box = document.createElement("article");
+// const image = document.createElement("img");
+// const text = document.createElement("p");
+// const button = document.createElement("button");
 
-text.textContent = "JavaScript – это язык программирования, который добавляет интерактивность на ваш веб-сайт (например: игры, отклик при нажатии кнопок или при вводе данных в формы, динамические стили, анимация). Эта статья поможет вам начать работать с этим захватывающим языком и даст вам представление о том, на что он способен.";
-button.textContent= "click";
+// text.textContent = "JavaScript – это язык программирования, который добавляет интерактивность на ваш веб-сайт (например: игры, отклик при нажатии кнопок или при вводе данных в формы, динамические стили, анимация). Эта статья поможет вам начать работать с этим захватывающим языком и даст вам представление о том, на что он способен.";
+// button.textContent= "click";
 // button.style.background = "blue";
-image.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3FaRrgt0RBdvk5VawbY--jGxKOzt2kzi-ew&s"
+// image.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3FaRrgt0RBdvk5VawbY--jGxKOzt2kzi-ew&s"
 
-const page = document.querySelector("body");
-page.append(box);
-box.append(image);
-box.append(text);
-box.append(button);
-button.classList.add("btn");
-text.classList.add("text");
-box.classList.add("art");
+// const page = document.querySelector("body");
+// page.append(box);
+// box.append(image);
+// box.append(text);
+// box.append(button);
+// button.classList.add("btn");
+// text.classList.add("text");
+// box.classList.add("art");
+
+// const box = `<article>
+//         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3FaRrgt0RBdvk5VawbY--jGxKOzt2kzi-ew&s" alt="js">
+//         <p>JavaScript – это язык программирования,</p>
+//         <button style="background-color: aqua;">click</button>
+//     </article>
+// <h1>test</h1>
+// <article>`;
+// console.log(box);
+// const page = document.querySelector("body");
+
+// page.innerHTML = box;
+// console.log(page)
+
+// document.querySelector("body").innerHTML = `<article>
+//          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3FaRrgt0RBdvk5VawbY--jGxKOzt2kzi-ew&s" alt="js">
+//          <p>JavaScript – это язык программирования,</p>
+//          <button style="background-color: aqua;">click</button>
+//      </article>
+//  <h1>test</h1>
+//  <article>`;
+
+
+//* Властивість innerHTML дозволяе глянути інформацію яка лежить між відкриваючим та закриваючим тегом. а таком можна замінитии  інформацію
+
+// const title = document.querySelector("h1");
+
+// console.log(title.innerHTML);
+// const box = document.querySelector("article");
+// console.log(box.innerHTML);
+
+// box.innerHTML = `<img src="" alt="">`;
+// console.log(box.innerHTML);
+// console.log(box);
+
+
+//* метод insertAdjacentHTML дозволяє додати кусок розмітки у вигляді рядка до певного елемента
+
+// const boxElement = document.querySelector(".box");
+// boxElement.insertAdjacentHTML("afterbegin", `<img src="" alt="">`);
+// console.log(boxElement);
+
+// boxElement.insertAdjacentHTML("beforeend", `<p>text</p>`);
+// console.log(boxElement);
+
+// boxElement.insertAdjacentHTML("beforebegin", `<h3>Lorem ipsum dolor sit amet.</h3>`);
+// console.log(boxElement);
+
 
 

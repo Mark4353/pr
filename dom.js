@@ -67,7 +67,6 @@
 //  <h1>test</h1>
 //  <article>`;
 
-
 //* Властивість innerHTML дозволяе глянути інформацію яка лежить між відкриваючим та закриваючим тегом. а таком можна замінитии  інформацію
 
 // const title = document.querySelector("h1");
@@ -79,7 +78,6 @@
 // box.innerHTML = `<img src="" alt="">`;
 // console.log(box.innerHTML);
 // console.log(box);
-
 
 //* метод insertAdjacentHTML дозволяє додати кусок розмітки у вигляді рядка до певного елемента
 
@@ -93,5 +91,59 @@
 // boxElement.insertAdjacentHTML("beforebegin", `<h3>Lorem ipsum dolor sit amet.</h3>`);
 // console.log(boxElement);
 
+//* Методи для роботи з атребутами
+
+// const linkElement = document.createElement("a");
+
+// linkElement.href = "https://edu.goiteens.com/"; ////*цей метод додае атребут до елемента
+// linkElement.setAttribute("href", "https://goiteens.com/"); //*цей метод додає атребут до елемента
+
+// //* метод getAttribute дивиться яке значеня лежить у атребуті
+
+// linkElement.getAttribute("href");
+// console.log(linkElement);
+
+// //* метод hasAttribute перевіряє чи є атребут у елеманті. повертае true чи false
+
+// const isHref = linkElement.hasAttribute("href");
+
+// console.log(isHref);
+
+// const obj = linkElement.attributes;
+// console.log(obj);
+
+// const obj2 = linkElement.removeAttribute("href");
+// console.log(obj2);
+
+// //* дата атребутами позначають елемент що на ньому є js
+
+// const openBtn = document.querySelector("[data-open]");
+// openBtn.dataset.open;
+// console.log(openBtn.dataset.open);
+// const saveBtn = document.querySelector("[data-save]");
+
+// Створити та додати колекцію кнопок з динамічними даними з масиву об’єктів.
+//  використати метод createElement
+
+
+const colorPickerOptions = [
+  { label: "red", color: "#F44336" },
+  { label: "green", color: "#4CAF50" },
+  { label: "blue", color: "#2196F3" },
+  { label: "grey", color: "#607D8B" },
+  { label: "pink", color: "#E91E63" },
+  { label: "indigo", color: "#3F51B5" },
+];
+
+const boxElement = document.createElement(".color-picker");
+colorPickerOptions.forEach((label, color) => {
+  const btnElement = document.createElement("button");
+  boxElement.prepend(btnElement);
+  btnElement.style.color = color;
+  btnElement.style.textContext = label;
+});
+
+
+// Переписати задачу 1 за допомогою методу innerHTML або insertAdjacentHTML
 
 

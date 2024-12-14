@@ -126,22 +126,22 @@
 //  використати метод createElement
 
 
-const colorPickerOptions = [
-  { label: "red", color: "#F44336" },
-  { label: "green", color: "#4CAF50" },
-  { label: "blue", color: "#2196F3" },
-  { label: "grey", color: "#607D8B" },
-  { label: "pink", color: "#E91E63" },
-  { label: "indigo", color: "#3F51B5" },
-];
+// const colorPickerOptions = [
+//   { label: "red", color: "#F44336" },
+//   { label: "green", color: "#4CAF50" },
+//   { label: "blue", color: "#2196F3" },
+//   { label: "grey", color: "#607D8B" },
+//   { label: "pink", color: "#E91E63" },
+//   { label: "indigo", color: "#3F51B5" },
+// ];
 
-const boxElement = document.createElement(".color-picker");
-colorPickerOptions.forEach((label, color) => {
-  const btnElement = document.createElement("button");
-  boxElement.prepend(btnElement);
-  btnElement.style.color = color;
-  btnElement.style.textContext = label;
-});
+// const boxElement = document.createElement(".color-picker");
+// colorPickerOptions.forEach((label, color) => {
+//   const btnElement = document.createElement("button");
+//   boxElement.prepend(btnElement);
+//   btnElement.style.color = color;
+//   btnElement.style.textContext = label;
+// });
 
 
 // Переписати задачу 1 за допомогою методу innerHTML або insertAdjacentHTML
